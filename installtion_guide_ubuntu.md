@@ -421,8 +421,18 @@ Initialize kubeadm
 ```
 kubeadm init
 
-If kubeadm is throwing error, below is the fix.
+If "kubeadm init" or "kubeadm join" is throwing error, below is the fix.
 
+======================================================================================================================================
+root@ip-172-31-2-214:~# kubeadm join 172.31.3.179:6443 --token d9aod9.36y8jn7x9og8ynm1 \
+>         --discovery-token-ca-cert-hash sha256:d80365fa335c96c55951be8de880b45365fad5a736316a63534479bd686d1fb9
+[preflight] Running pre-flight checks
+error execution phase preflight: [preflight] Some fatal errors occurred:
+        [ERROR CRI]: container runtime is not running: output: time="2022-05-21T07:14:56Z" level=fatal msg="getting status of runtime: rpc error: code = Unimplemented desc = unknown service runtime.v1alpha2.RuntimeService"
+, error: exit status 1
+[preflight] If you know what you are doing, you can make a check non-fatal with `--ignore-preflight-errors=...`
+To see the stack trace of this error execute with --v=5 or higher
+=======================================================================================================================================
 rm /etc/containerd/config.toml
 systemctl restart containerd
 kubeadm init
