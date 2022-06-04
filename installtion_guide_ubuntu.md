@@ -82,6 +82,8 @@ for more details - https://tecadmin.net/install-oracle-java-11-on-ubuntu-16-04-x
  For more details https://tecadmin.net/install-apache-maven-on-ubuntu/ 
  
  easy way to install - sudo apt install maven
+ NOTE: You need to create pom.xml manually and will have to run commands from that folder where pom.xml resides.
+	Also note you need to modify the settings.xml under conf to configure .m2 folder to local repository.
  
    
  ## Docker installation in ubuntu 16.04
