@@ -126,7 +126,8 @@ for more details refer  https://docs.docker.com/install/linux/docker-ce/ubuntu/#
 Use apt-get to install the required packages.
  - apt-get update
  - apt-get install unzip software-properties-common wget default-jdk
- Note: Install java 11 only and admin/admin is the default userID and password of sonarqube
+
+Note: Install java 11 only and admin/admin is the default userID and password of sonarqube
  
 Install the PostgreSQL database service.
  - apt-get install postgresql postgresql-contrib
